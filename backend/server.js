@@ -17,7 +17,8 @@ const connectDB = async () => {
   try {
     // If no URI is provided, use a local MongoDB fallback for development
     const mongoURI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/portfolio-builder';
-    const conn = await mongoose.connect(mongoURI);
+    // Use family: 4 to force IPv4, fixing Node 18+ DNS resolution issues on Railway
+    const conn = await mongoose.connect(mongoURI, { family: 4 });
     console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
     console.error(`Error connecting to MongoDB: ${error.message}`);
