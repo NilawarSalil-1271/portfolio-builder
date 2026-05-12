@@ -41,7 +41,7 @@ export default function BuilderForm() {
 
   return (
     <div className="p-6 bg-white dark:bg-zinc-900 overflow-y-auto h-full border-r border-gray-200 dark:border-zinc-800">
-      <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Portfolio Builder</h2>
+      <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">StackShow Builder</h2>
       
       {/* Basic Info */}
       <section className="mb-8">
